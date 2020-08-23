@@ -1,0 +1,29 @@
+<br/>
+<mat-card class="discount-card">
+    <mat-card-header>
+      <mat-card-title>Update Super Student Discount</mat-card-title>
+    </mat-card-header>
+    <br/>
+    <mat-card-content align="left">
+      <mat-form-field>
+          <input matInput [(ngModel)]="superStudentDiscountCreate.driverage" placeholder="Max Driver Age">
+      </mat-form-field> 
+      <br/>
+      <mat-form-field>
+        <input matInput [(ngModel)]="superStudentDiscountCreate.drivermediumgpa" placeholder="Medium Driver GPA">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="superStudentDiscountCreate.driverhighgpa" placeholder="High Driver GPA">
+      </mat-form-field>
+      <br/>
+      <mat-form-field>
+        <input matInput [(ngModel)]="superStudentDiscountCreate.discountmediumamount" placeholder="Medium Discount Amount">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="superStudentDiscountCreate.discounthighamount" placeholder="High Discount Amount">
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions align="left">
+      <button mat-raised-button  (click)="updateSuperStudentDiscount()">Update Discount</button>
+    </mat-card-actions>
+</mat-card>

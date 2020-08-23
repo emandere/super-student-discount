@@ -6,11 +6,11 @@
           </button>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/sessions" routerLinkActive="active" (click)="drawer.toggle()" >
+      <a mat-list-item routerLink="/" routerLinkActive="active" (click)="drawer.toggle()" >
         <mat-icon mat-list-icon>settings_input_composite</mat-icon>
         <h4 mat-line>Update Discount Data</h4>
       </a>
-      <a mat-list-item routerLink="/sessions" routerLinkActive="active" (click)="drawer.toggle()" >
+      <a mat-list-item routerLink="/testdiscount" routerLinkActive="active" (click)="drawer.toggle()" >
         <mat-icon mat-list-icon>swap_vert</mat-icon>
         <h4 mat-line>Test Discount</h4>
       </a>
@@ -21,7 +21,7 @@
           <button mat-icon-button (click)="drawer.toggle()">
               <mat-icon>menu</mat-icon>
           </button>
-          <span class="title">Super student discount</span>
+          <span class="title">Super Student Discount</span>
       </mat-toolbar>
     <div class="content fit" align="center">
         <router-outlet></router-outlet>

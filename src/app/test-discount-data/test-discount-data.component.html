@@ -1,0 +1,24 @@
+<br/>
+<mat-card class="test-card">
+    <mat-card-header>
+      <mat-card-title>Test Discount</mat-card-title>
+    </mat-card-header>
+    <br/>
+    <mat-card-content align="left">
+      <mat-form-field>
+          <input matInput [(ngModel)]="testdriver.age" placeholder="Age">
+      </mat-form-field> 
+      <br/>
+      <mat-form-field>
+        <input matInput [(ngModel)]="testdriver.gpa" placeholder="GPA">
+      </mat-form-field> 
+      <br/>
+      <mat-form-field>
+        <input matInput [(ngModel)]="testdriver.isenrolled" placeholder="IsEnrolled">
+      </mat-form-field> 
+      
+    </mat-card-content>
+    <mat-card-actions align="left">
+      <button mat-raised-button  (click)="testDiscount()">Update Discount</button>
+    </mat-card-actions>
+</mat-card>

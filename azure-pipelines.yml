@@ -10,6 +10,7 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
+  releaseTag: '$(Build.BuildNumber)'
   serviceName: 'super-student-discount'
   ImageName: 'emandere/$(serviceName)'
   DeploymentPath: '/home/ec2-user/deployments/$(serviceName)/$(releaseTag)'

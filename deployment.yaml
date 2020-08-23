@@ -1,0 +1,45 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: superstudent
+  annotations:
+    traefik.frontend.rule.type: PathPrefixStrip
+spec:
+    rules:
+        - http:
+            paths:
+            - path: /
+              backend:
+                serviceName: superstudent
+                servicePort: 80 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: superstudent
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: super-student-discount
+---
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: super-student-discount
+spec:
+  selector:
+    matchLabels:
+      app: super-student-discount
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: super-student-discount
+    spec:
+      containers:
+      - name: super-student-discount
+        image: emandere/super-student-discount:{buildId}
+        ports:
+        - containerPort: 80

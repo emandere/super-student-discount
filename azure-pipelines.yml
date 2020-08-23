@@ -12,9 +12,9 @@ variables:
   tag: '$(Build.BuildId)'
   serviceName: 'super-student-discount'
   ImageName: 'emandere/$(serviceName)'
-  DeploymentPath: '/home/emandere/deployments/$(serviceName)/$(releaseTag)'
+  DeploymentPath: '/home/ec2-user/deployments/$(serviceName)/$(releaseTag)'
   GitHubDeploymentPath: 'https://raw.githubusercontent.com/emandere/$(serviceName)/master/deployment.yaml'
-  DeploymentConfigPath: '/home/emandere/deployments/$(serviceName)/$(releaseTag)/deployment.yaml'
+  DeploymentConfigPath: '/home/ec2-user/deployments/$(serviceName)/$(releaseTag)/deployment.yaml'
 
 stages:
 - stage: Build

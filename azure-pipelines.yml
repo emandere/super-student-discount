@@ -38,9 +38,9 @@ stages:
 - stage: Deploy
   jobs:
     # track deployments on the environment
-  - deployment: WSL_Linux
+  - deployment: AWS
     pool:
-      name: LocalLinux
+      vmImage: 'ubuntu-latest'
     # creates an environment if it doesn’t exist
     environment: '$(serviceName)'
     strategy:
@@ -48,34 +48,23 @@ stages:
       runOnce:
         deploy:
           steps:
-            - bash: |
-                # Write your commands here
-
-                echo $(releaseTag)
-
-                sudo mkdir -p $(DeploymentPath)
-                
-                sudo rm -f $(DeploymentPath)/*
-                
-                sudo chmod 775 $(DeploymentPath)
-                
-                sudo wget -q $(GitHubDeploymentPath) -P  $(DeploymentPath)
-                
-                
-                sudo sed -i 's/{buildId}/$(Build.BuildId)/'  $(DeploymentConfigPath)
-                
-                
-              displayName: 'Set up artifacts'
-
-            - bash: |
-                # Write your commands here
-            
-                sudo k3s kubectl apply -f  $(DeploymentConfigPath)
-              
-              displayName: 'Deploy Release'
-            - bash: |
-                # Write your commands here
-          
-                sudo k3s kubectl rollout status deployment.v1.apps/$(serviceName)
-            
+            - task: SSH@0
+              displayName: 'Set up release artifacts'
+              inputs:
+                sshEndpoint: 'aws-student'
+                commands: |
+                  mkdir -p $(DeploymentPath)
+                  rm -f $(DeploymentPath)/*
+                  chmod 775 $(DeploymentPath)
+                  wget -q $(GitHubDeploymentPath) -P  $(DeploymentPath)
+                  sed -i 's/{buildId}/$(Build.BuildId)/'  $(DeploymentConfigPath)
+            - task: SSH@0
+              displayName: 'Deploy new release'
+              inputs:
+                sshEndpoint: 'aws-student'
+                commands: 'k3s kubectl apply -f  $(DeploymentConfigPath)'
+            - task: SSH@0
               displayName: 'Verify Release'
+              inputs:
+                sshEndpoint: 'aws-student'
+                commands: 'k3s kubectl rollout status deployment.v1.apps/$(serviceName)'

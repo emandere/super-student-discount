@@ -8,7 +8,7 @@ spec:
     rules:
         - http:
             paths:
-            - path: /superstudent
+            - path: /
               backend:
                 serviceName: superstudent
                 servicePort: 80 

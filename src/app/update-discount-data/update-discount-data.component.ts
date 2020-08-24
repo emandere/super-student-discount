@@ -16,6 +16,7 @@ export class UpdateDiscountDataComponent implements OnInit {
     this.superStudentDiscountCreate ={
       state: "OH",
       driverage:17,
+      drivereligiblegpa:3.5,
       drivermediumgpa :3.5,
       driverhighgpa :3.8,
       discountmediumamount:20,

@@ -12,6 +12,7 @@ export class TestDiscountDataComponent implements OnInit {
 
   ngOnInit(): void {
     this.testdriver = {
+      state: 'OH',
       age: 17,
       gpa: 3.0,
       isenrolled: true

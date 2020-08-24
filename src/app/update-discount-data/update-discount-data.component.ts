@@ -14,6 +14,7 @@ export class UpdateDiscountDataComponent implements OnInit {
 
   ngOnInit(): void {
     this.superStudentDiscountCreate ={
+      state: "OH",
       driverage:17,
       drivermediumgpa :3.5,
       driverhighgpa :3.8,

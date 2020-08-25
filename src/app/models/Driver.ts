@@ -1,7 +1,10 @@
 export class Driver
 {
     state:string;
-    age:number;
-    gpa:number;
-    isenrolled:boolean;
+    driverAge:number;
+    driverGPA:number;
+    studentstatus:string;
+    violations:string[];
+    maritalstatus:string;
+    relationship:string;
 }

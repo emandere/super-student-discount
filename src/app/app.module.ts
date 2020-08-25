@@ -21,6 +21,8 @@ import { MatDialogModule}  from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 
 
@@ -57,6 +59,7 @@ import { ViewDiscountsComponent } from './view-discounts/view-discounts.componen
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
+    MatCheckboxModule,
     RouterModule.forRoot([
       { path: '',component: UpdateDiscountDataComponent,pathMatch: 'full'},
       { path: 'testdiscount',component: TestDiscountDataComponent},

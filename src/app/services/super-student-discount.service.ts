@@ -1,21 +1,30 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Discounts, SuperStudentDiscount, UpdateDiscountResponse } from '../models/SuperStudentDiscount';
+import { Discounts, SuperStudentDiscount, UpdateDiscountResponse, DiscountResult } from '../models/SuperStudentDiscount';
+import { Driver } from '../models/Driver';
 @Injectable({
   providedIn: 'root'
 })
 export class SuperStudentDiscountService {
-  //url:string = 'http://localhost:5000/api/superstudentparmsdiscount';
-    url:string = `http://${window.location.hostname}/service/api/superstudentparmsdiscount`
+  urlLocal:string = 'http://localhost:5000';
+  urlRemote:string = `http://${window.location.hostname}/service`
+  url:string = window.location.hostname.includes('localhost')? this.urlLocal:this.urlRemote;
   constructor(private http:HttpClient) { }
   getDiscounts(){
-    
-    return this.http.get<Discounts>(this.url);
+    let getURL = this.url + '/api/superstudentparmsdiscount'
+    return this.http.get<Discounts>(getURL);
   }
 
   updateDiscounts(superStudentDiscount:SuperStudentDiscount)
   {
-     return this.http.post<UpdateDiscountResponse>(this.url,JSON.stringify(superStudentDiscount),this.setOptions());
+     let updateURL = this.url + '/api/superstudentparmsdiscount'
+     return this.http.post<UpdateDiscountResponse>(updateURL,JSON.stringify(superStudentDiscount),this.setOptions());
+  }
+
+  testDiscount(driver:Driver)
+  {
+    let testURL = this.url + '/superstudentdiscount'
+     return this.http.post<DiscountResult>(testURL,JSON.stringify(driver),this.setOptions());
   }
 
   setOptions()

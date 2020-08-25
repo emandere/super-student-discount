@@ -8,3 +8,8 @@ export class SuperStudentDiscount
     discountmediumamount:number;
     discounthighamount:number;
 }
+
+
+export class Discounts {
+    discounts: SuperStudentDiscount[];
+}

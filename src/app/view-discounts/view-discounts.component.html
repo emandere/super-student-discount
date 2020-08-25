@@ -1,0 +1,36 @@
+<br/>
+<div *ngIf="(discounts$ | async ) as discountInfo">
+    <table mat-table [dataSource]="discountInfo.discounts" class="mat-elevation-z8">
+        <ng-container matColumnDef="State">
+            <th mat-header-cell *matHeaderCellDef> State </th>
+            <td mat-cell *matCellDef="let discount"> <div class ="tableinfo">{{discount.state}}</div> </td>
+        </ng-container>
+        <ng-container matColumnDef="Age">
+            <th mat-header-cell *matHeaderCellDef> Age </th>
+            <td mat-cell *matCellDef="let discount"> <div class ="tableinfo"> {{discount.driverage}}</div> </td>
+        </ng-container>
+        <ng-container matColumnDef="EligGPA">
+            <th mat-header-cell *matHeaderCellDef> Elig GPA </th>
+            <td mat-cell *matCellDef="let discount"> <div class ="tableinfo"> {{discount.drivereligiblegpa}} </div></td>
+        </ng-container>
+        <ng-container matColumnDef="MedGPA">
+            <th mat-header-cell *matHeaderCellDef> Med GPA </th>
+            <td mat-cell *matCellDef="let discount"> <div class ="tableinfo">{{discount.drivermediumgpa}}</div> </td>
+        </ng-container>
+        <ng-container matColumnDef="HighGPA">
+            <th mat-header-cell *matHeaderCellDef> High GPA </th>
+            <td mat-cell *matCellDef="let discount"> <div class ="tableinfo"> {{discount.driverhighgpa}} </div> </td>
+        </ng-container>
+        <ng-container matColumnDef="MedDisc">
+            <th mat-header-cell *matHeaderCellDef> Med Disc </th>
+            <td mat-cell *matCellDef="let discount"> <div class ="tableinfo"> {{discount.discountmediumamount}} </div></td>
+        </ng-container>
+        <ng-container matColumnDef="HighDisc">
+            <th mat-header-cell *matHeaderCellDef> High Disc </th>
+            <td mat-cell *matCellDef="let discount"> <div class ="tableinfo"> {{discount.discounthighamount}} </div></td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

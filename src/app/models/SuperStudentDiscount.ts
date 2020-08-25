@@ -13,3 +13,8 @@ export class SuperStudentDiscount
 export class Discounts {
     discounts: SuperStudentDiscount[];
 }
+
+
+export interface UpdateDiscountResponse {
+    status: string;
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import { SuperStudentDiscount } from '../models/SuperStudentDiscount'
+import { SuperStudentDiscountService } from '../services/super-student-discount.service';
 
 @Component({
   selector: 'app-update-discount-data',
@@ -10,7 +12,8 @@ import { SuperStudentDiscount } from '../models/SuperStudentDiscount'
 })
 export class UpdateDiscountDataComponent implements OnInit {
   superStudentDiscountCreate:SuperStudentDiscount;
-  constructor() { }
+  states:string[]=['AZ','CO','OH']
+  constructor(private superStudentDiscountService:SuperStudentDiscountService,private snackbar:MatSnackBar) { }
 
   ngOnInit(): void {
     this.superStudentDiscountCreate ={
@@ -25,7 +28,9 @@ export class UpdateDiscountDataComponent implements OnInit {
   }
 
   updateSuperStudentDiscount() {
-    
+    return this.superStudentDiscountService.updateDiscounts(this.superStudentDiscountCreate).subscribe(
+      result=>this.snackbar.open("Update Discount",result.status,{ duration: 5000 })
+    );
   }
 
 }

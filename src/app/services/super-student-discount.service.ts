@@ -5,8 +5,8 @@ import { Discounts, SuperStudentDiscount, UpdateDiscountResponse } from '../mode
   providedIn: 'root'
 })
 export class SuperStudentDiscountService {
-  url:string = 'http://localhost:5000/api/superstudentparmsdiscount';
-    //url:string = `http://${window.location.hostname}/service/api/superstudentparmsdiscount`
+  //url:string = 'http://localhost:5000/api/superstudentparmsdiscount';
+    url:string = `http://${window.location.hostname}/service/api/superstudentparmsdiscount`
   constructor(private http:HttpClient) { }
   getDiscounts(){
     

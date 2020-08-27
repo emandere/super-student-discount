@@ -6,7 +6,7 @@
     <br/>
     <mat-card-content align="left">
       <mat-form-field>
-        <mat-select [(ngModel)]="testdriver.state" placeholder="State">
+        <mat-select id="state" [(ngModel)]="testdriver.state" placeholder="State">
           <mat-option *ngFor="let state of states" [value]="state">
               {{state}}
           </mat-option>
@@ -14,15 +14,15 @@
       </mat-form-field> 
       <br/>
       <mat-form-field>
-          <input type="number" matInput [(ngModel)]="testdriver.driverAge" placeholder="Age">
+          <input type="number" id="driverage" matInput [(ngModel)]="testdriver.driverAge" placeholder="Age">
       </mat-form-field> 
       <br/>
       <mat-form-field>
-        <input type="number" matInput [(ngModel)]="testdriver.driverGPA" placeholder="GPA">
+        <input type="number" id="drivergpa" matInput [(ngModel)]="testdriver.driverGPA" placeholder="GPA">
       </mat-form-field> 
       <br/>
       <mat-form-field>
-        <mat-select [(ngModel)]="testdriver.studentstatus" placeholder="High School Status">
+        <mat-select id="studentstatus" [(ngModel)]="testdriver.studentstatus" placeholder="High School Status">
           <mat-option *ngFor="let status of studentstatuses" [value]="status">
               {{status}}
           </mat-option>
@@ -30,7 +30,7 @@
       </mat-form-field> 
       <br/>
       <mat-form-field>
-        <mat-select [(ngModel)]="testdriver.maritalstatus" placeholder="Marital Status">
+        <mat-select id="maritalstatus" [(ngModel)]="testdriver.maritalstatus" placeholder="Marital Status">
           <mat-option *ngFor="let mStatus of maritalStatuses" [value]="mStatus">
               {{mStatus}}
           </mat-option>
@@ -38,19 +38,19 @@
       </mat-form-field> 
       <br/>
       <mat-form-field>
-        <mat-select [(ngModel)]="testdriver.relationship" placeholder="Relationship">
+        <mat-select id="relationship" [(ngModel)]="testdriver.relationship" placeholder="Relationship">
           <mat-option *ngFor="let relationship of relationships" [value]="relationship">
               {{relationship}}
           </mat-option>
         </mat-select>
       </mat-form-field> 
       <br/>
-      <mat-checkbox matInput [(ngModel)]="hasViolation">Has Violation</mat-checkbox>
+      <mat-checkbox id="hasviolation" matInput [(ngModel)]="hasViolation">Has Violation</mat-checkbox>
       
       
     </mat-card-content>
     <mat-card-actions align="left">
-      <button mat-raised-button  (click)="testDiscount()">Test Discount</button>
+      <button id="testdiscount" mat-raised-button  (click)="testDiscount()">Test Discount</button>
     </mat-card-actions>
 </mat-card>
 <br/>
@@ -58,7 +58,7 @@
   <mat-card-header>
     <mat-card-title>Results</mat-card-title>
   </mat-card-header>
-  <mat-card-content align="left">
+  <mat-card-content id="discountamount" align="left">
     Discount Granted: {{discountResult.discountGranted}}
     <br/>
     Discount Amount: {{discountResult.discountAmount}}

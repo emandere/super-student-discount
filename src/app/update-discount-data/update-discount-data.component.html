@@ -7,7 +7,7 @@
     <br/>
     <mat-card-content align="left">
       <mat-form-field>
-        <mat-select [(ngModel)]="superStudentDiscountCreate.state" placeholder="State">
+        <mat-select id="update_state" [(ngModel)]="superStudentDiscountCreate.state" placeholder="State">
           <mat-option *ngFor="let state of states" [value]="state">
               {{state}}
           </mat-option>
@@ -15,11 +15,11 @@
       </mat-form-field> 
       <br/>
       <mat-form-field>
-          <input type="number" matInput [(ngModel)]="superStudentDiscountCreate.driverage" placeholder="Eligible Driver Age">
+          <input type="number" id="update_driverage" matInput [(ngModel)]="superStudentDiscountCreate.driverage" placeholder="Eligible Driver Age">
       </mat-form-field> 
       <br/>
       <mat-form-field>
-        <input type="number" matInput [(ngModel)]="superStudentDiscountCreate.drivereligiblegpa" placeholder="Eligible GPA">
+        <input type="number"id="update_drivereligiblegpa" matInput [(ngModel)]="superStudentDiscountCreate.drivereligiblegpa" placeholder="Eligible GPA">
       </mat-form-field>      
     </mat-card-content>
     
@@ -31,20 +31,20 @@
   </mat-card-header>
   <mat-card-content align="left">
     <mat-form-field>
-      <input type="number" matInput [(ngModel)]="superStudentDiscountCreate.drivermediumgpa" placeholder="Medium Driver GPA">
+      <input type="number" id="update_drivermediumgpa" matInput [(ngModel)]="superStudentDiscountCreate.drivermediumgpa" placeholder="Medium Driver GPA">
     </mat-form-field>
     <mat-form-field>
-      <input type="number" matInput [(ngModel)]="superStudentDiscountCreate.discountmediumamount" placeholder="Medium Discount Amount">
+      <input type="number" id="update_discountmediumamount" matInput [(ngModel)]="superStudentDiscountCreate.discountmediumamount" placeholder="Medium Discount Amount">
     </mat-form-field>
     <mat-form-field>
-      <input type="number" matInput [(ngModel)]="superStudentDiscountCreate.driverhighgpa" placeholder="High Driver GPA">
+      <input type="number" id="update_driverhighgpa" matInput [(ngModel)]="superStudentDiscountCreate.driverhighgpa" placeholder="High Driver GPA">
     </mat-form-field>
     <mat-form-field>
-      <input type="number" matInput [(ngModel)]="superStudentDiscountCreate.discounthighamount" placeholder="High Discount Amount">
+      <input type="number" id="update_discounthighamount" matInput [(ngModel)]="superStudentDiscountCreate.discounthighamount" placeholder="High Discount Amount">
     </mat-form-field>
   </mat-card-content>
   <mat-card-actions align="left">
-    <button mat-raised-button color="accent"  (click)="updateSuperStudentDiscount()">Update Discount</button>
+    <button mat-raised-button color="accent" id="updateSuperStudentDiscount" (click)="updateSuperStudentDiscount()">Update Discount</button>
   </mat-card-actions>
 </mat-card>
 

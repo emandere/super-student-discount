@@ -32,13 +32,15 @@ import { UpdateDiscountDataComponent } from './update-discount-data/update-disco
 import { RouterModule } from '@angular/router';
 import { TestDiscountDataComponent } from './test-discount-data/test-discount-data.component';
 import { ViewDiscountsComponent } from './view-discounts/view-discounts.component';
+import { CombTestsDiscountComponent } from './comb-tests-discount/comb-tests-discount.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UpdateDiscountDataComponent,
     TestDiscountDataComponent,
-    ViewDiscountsComponent
+    ViewDiscountsComponent,
+    CombTestsDiscountComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,7 @@ import { ViewDiscountsComponent } from './view-discounts/view-discounts.componen
     RouterModule.forRoot([
       { path: '',component: UpdateDiscountDataComponent,pathMatch: 'full'},
       { path: 'testdiscount',component: TestDiscountDataComponent},
+      { path: 'combtestdiscount',component: CombTestsDiscountComponent},
       { path: 'viewdiscounts',component: ViewDiscountsComponent}
     ]),
   ],

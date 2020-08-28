@@ -1,0 +1,209 @@
+{
+    "hasAllTestRunsPass": false,
+    "testRuns": [
+        {
+            "testName": "SuperStudentQualifiesForDiscountAsync",
+            "hasPassed": false,
+            "failedTestCases": [
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 17,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 19,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <False> but was <True>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 29,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <False> but was <True>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 30,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <False> but was <True>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 31,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <False> but was <True>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.51,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.79,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.8,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.81,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 4,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Divorced",
+                    "resultMessage": "Expected <True> but was <False>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 16,
+                    "relationship": "Child",
+                    "studentStatus": "College-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <True> but was <False>"
+                }
+            ],
+            "exceptionMessage": null
+        },
+        {
+            "testName": "SuperStudentDiscountAmountAsync",
+            "hasPassed": false,
+            "failedTestCases": [
+                {
+                    "state": "OH",
+                    "driverAge": 29,
+                    "relationship": "Child",
+                    "studentStatus": "college-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.5,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <0> but was <20>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 29,
+                    "relationship": "Child",
+                    "studentStatus": "college-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.51,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <0> but was <20>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 29,
+                    "relationship": "Child",
+                    "studentStatus": "college-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.79,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <0> but was <20>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 29,
+                    "relationship": "Child",
+                    "studentStatus": "college-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.8,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <0> but was <40>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 29,
+                    "relationship": "Child",
+                    "studentStatus": "college-enrolled",
+                    "violations": [],
+                    "driverGPA": 3.81,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <0> but was <40>"
+                },
+                {
+                    "state": "OH",
+                    "driverAge": 29,
+                    "relationship": "Child",
+                    "studentStatus": "college-enrolled",
+                    "violations": [],
+                    "driverGPA": 4,
+                    "maritalStatus": "Single",
+                    "resultMessage": "Expected <0> but was <40>"
+                }
+            ],
+            "exceptionMessage": null
+        }
+    ]
+}

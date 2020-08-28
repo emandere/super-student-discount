@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class CombDiscountServiceService {
   urlLocal:string = 'assets/testresult.json';
-  urlRemote:string = `http://${window.location.hostname}/servicetest/api/superstudentdiscounttestrunnerui`
+  urlRemote:string = `http://${window.location.hostname}/servicetest/api/superstudentdiscounttestrunner`
   url:string = window.location.hostname.includes('localhost')? this.urlLocal:this.urlRemote;
   constructor(private http:HttpClient) { }
   getTestResults(){

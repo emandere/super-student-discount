@@ -23,7 +23,7 @@ export class SuperStudentDiscountService {
 
   testDiscount(driver:Driver)
   {
-    let testURL = this.url + '/superstudentdiscount'
+    let testURL = this.url + '/api/superstudentdiscount'
      return this.http.post<DiscountResult>(testURL,JSON.stringify(driver),this.setOptions());
   }
 

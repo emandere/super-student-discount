@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Driver } from '../models/Driver';
 import { DiscountResult } from '../models/SuperStudentDiscount';
 import { SuperStudentDiscountService } from '../services/super-student-discount.service';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-test-discount-data',
@@ -15,7 +15,7 @@ export class TestDiscountDataComponent implements OnInit {
   maritalStatuses:string[]=['divorced','married','single'];
   relationships:string[]=['child','spouse','insured'];
   studentstatuses:string[]=['enrolled','graduated','dropped out'];
-  discountResult$:Observable<DiscountResult>=null;
+  discountResult$:Observable<DiscountResult>=of({discountAmount:0,discountGranted:false});
   hasViolation:boolean;
   constructor(private superStudentDiscountService:SuperStudentDiscountService ) { }
 

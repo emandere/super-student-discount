@@ -58,9 +58,14 @@
   <mat-card-header>
     <mat-card-title>Results</mat-card-title>
   </mat-card-header>
-  <mat-card-content id="discountamount" align="left">
-    Discount Granted: {{discountResult.discountGranted}}
-    <br/>
-    Discount Amount: {{discountResult.discountAmount}}
+  <mat-card-content  align="left">
+    <mat-form-field appearance="outline">
+      <mat-label>Discount Granted</mat-label>
+        <input id="discountgranted" disabled matInput [(ngModel)]="discountResult.discountGranted" matInput placeholder="Placeholder">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Discount Amount</mat-label>
+        <input id="discountamount" disabled matInput [(ngModel)]="discountResult.discountAmount" matInput placeholder="Placeholder">
+    </mat-form-field>
   </mat-card-content>
 </mat-card>
